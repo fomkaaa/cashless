@@ -1,7 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta http-equiv="refresh" content="0; URL=./index.html" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script>
+      // Зберігаємо шлях, який користувач відкрив (наприклад /payments)
+      sessionStorage.redirect = location.pathname;
+
+      // Перенаправляємо на index.html
+      window.location.replace("./index.html");
+    </script>
+
+    <title>Redirecting...</title>
   </head>
   <body></body>
 </html>
