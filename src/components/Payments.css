@@ -1,0 +1,254 @@
+.payments-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.add-payment {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.add-payment input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.add-payment button {
+  padding: 10px 20px;
+  border: none;
+  background: #1e1e2f;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-payment button:hover {
+  background: #33334a;
+}
+
+.search-payment {
+  margin-bottom: 15px;
+}
+
+.search-payment input {
+  max-width: 780px;
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.filters {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.filters label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.filters select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background: #f0f0f0;
+}
+
+table button {
+  padding: 4px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  background: #ff4d4d; /* червоний колір для Скасувати */
+  color: white;
+  transition: 0.2s;
+}
+
+table button:hover {
+  opacity: 0.8;
+}
+
+table select,
+table input {
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Кольорові статуси */
+.status-В-обробці {
+  background-color: #fff4e5;
+}
+.status-Завершено {
+  background-color: #e6ffed;
+}
+.status-Відхилено {
+  background-color: #ffe6e6;
+}
+
+/* Модальне вікно */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+  margin-top: 0;
+}
+
+.modal-content button {
+  margin-top: 15px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #1e90ff;
+  color: white;
+}
+
+.pagination {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.pagination button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #1e1e2f;
+  color: white;
+  transition: 0.2s;
+}
+
+.pagination button:hover {
+  opacity: 0.8;
+}
+
+.pagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.active-page {
+  background: #ff6347; /* виділена поточна сторінка */
+}
+.payment-stats {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.payment-stats .stat {
+  background: #f4f4f4;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.payment-stats .stat b {
+  font-size: 16px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid #000; /* чорний контур */
+}
+
+.dot.yellow {
+  background-color: #fff4e5;
+}
+
+.dot.green {
+  background-color: #28a745;
+}
+
+.dot.red {
+  background-color: #dc3545;
+}
+
+.bottom-popup {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  animation: fadeIn 0.3s ease-out;
+  z-index: 2000;
+}
+
+.bottom-popup.success {
+  background: #28a745;
+}
+
+.bottom-popup.error {
+  background: #e53935;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
